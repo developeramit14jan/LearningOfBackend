@@ -1,0 +1,48 @@
+body{
+    text-align: center;
+    margin: 10px;
+}
+h1{
+    color: grey;
+    font-size: 50px;
+}
+
+input[type ="text"]{
+
+    padding: 5px;
+    font-size: 15px;
+    color: lightgrey;
+    width: 45%;
+    border: 0px;
+}
+input[type ="number"]{
+    padding: 5px;
+    font-size: 15px;
+    width: 45%;
+    border: 0px;
+}
+
+button[type ="submit"]{
+    padding: 5px;
+    width:50px;
+    
+}
+
+table{
+    text-align: left;
+    width: 100%;
+}
+thead{
+    background-color: orange;
+    font-size: 20px;
+}
+th , td{
+    padding: 10px;
+    font-size: 18px;
+    font-family: sans-serif;
+    /* border:1px solid black; */
+}
+
+tr:nth-child(2n){
+    background-color: #cee;
+}

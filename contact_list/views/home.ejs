@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title><%= title %></title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+        <link rel="stylesheet" href="/home.css">
+    </head>
+    <body>
+        <div>
+            <!-- <form action="">
+                <input type ="text"  name ="name" , placeholder="Enter The Name" , required>
+                <input type ="number" , name ="phone" placeholder="Enter The Phone_no:" , required>
+                <button type ="submit">Delete Contact</button>
+            </form> -->
+        </div>
+       
+        <h1> <i class="fas fa-address-book"></i>  My Contact List </h1>
+        <div>
+            <table>
+                <thead>
+                    <th>SNo:</th>
+                    <th>Name:</th>
+                    <th>Phone No:</th>
+                </thead>
+        <% for(let i = 0 ; i<contact.length ; i++ ){%>
+            <tr>
+                <td><%=i %></td>
+                <td><%= contact[i].name %> </td>
+                <td><%= contact[i].phone %>&nbsp
+                    <a href="/delete-contact/<%= contact[i].phone%>"><i class="fas fa-trash-alt"></i></a>
+                </td>
+            </tr>
+        <%}%>
+            </table>
+            
+        </div>
+        <form id = "form" action="create_contact" method="POST">
+            <input type ="text"  name ="name" , placeholder="Enter The Name" , required>
+            <input type ="number" , name ="phone" placeholder="Enter The Phone_no:" , required>
+            <button type ="submit"><i class="fas fa-user-plus"></i></button>
+        </form>
+    </body>
+</html>
